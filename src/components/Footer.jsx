@@ -42,6 +42,3 @@ const Footer = () => {
 
 export default Footer;
 
-//add to commit
-//commit
-push => 1 - push 2 - push orign
