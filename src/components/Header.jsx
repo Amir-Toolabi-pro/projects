@@ -37,12 +37,12 @@ const Header = () => {
             <form action="">
               <input type="text" placeholder="هرچی تو ذهنت هست جستجو کن" />
             </form>
-          </div>
-          <div className="login">
             <button>
               <img src={map} alt="" />
               اطراف من
             </button>
+          </div>
+          <div className="login">
             <button className="btnform">
               <img src={mgglass} alt="" />
             </button>
