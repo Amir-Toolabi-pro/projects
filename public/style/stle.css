@@ -1,0 +1,492 @@
+@font-face{
+  font-family: 'IRsans';
+  src: url(../font/IRAN\ Sans\ Regular.ttf) format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: IRsans;
+}
+
+body {
+  direction: rtl;
+  background-color: #efffef;
+  overflow-x: hidden;
+}
+
+section{
+  overflow-y: scroll;
+  /* background-color: red; */
+}
+
+section.body{
+  overflow-y: hidden;
+  background-color: blue;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 7px 1px #ded;
+  width: 100%;
+  height: 65px;
+  z-index: 1;
+}
+
+header .contentheader {
+  width: 98%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .contentheader .items {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+header .contentheader .items button {
+  padding: 7px 8px 10px;
+  background-color: #eff;
+  font-size: 16px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+header .contentheader .items button:hover {
+  background-color: #ddd;
+}
+header .contentheader .items button img {
+  width: 18px;
+  margin-bottom: -5px;
+}
+header .contentheader .items a img {
+  width: 120px;
+}
+
+header .contentheader .items .fav {
+  display: none;
+}
+header .contentheader .items .fav img {
+  width: 40px;
+  margin-bottom: -3px;
+}
+
+header .contentheader .search {
+  width: 34%;
+}
+header .contentheader .search form {
+  width: 100%;
+}
+header .contentheader .search form input {
+  width: 100%;
+  border-radius: 30px;
+  outline: none;
+  padding: 7px 15px 7px 0;
+  background-color: #dfefff;
+  border: none;
+  font-size: 20px;
+  color: #999;
+}
+header .contentheader .search form input::-webkit-input-placeholder {
+  /* Edge */
+  color: #aaa;
+  font-size: 20px;
+}
+header .contentheader .search form input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #aaa;
+  font-size: 20px;
+}
+header .contentheader .search form input::placeholder {
+  color: #aaa;
+  font-size: 20px;
+}
+
+header .contentheader .login {
+  width: 31%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .contentheader .login button {
+  background-color: #2196f3;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  padding: 4px 20px 9px;
+  border-radius: 20px;
+}
+header .contentheader .login button img {
+  width: 18px;
+  margin-bottom: -3px;
+  margin-left: 7px;
+}
+
+header .contentheader .login .btnform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  background-color: #dfefff;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 5px;
+  display: none;
+}
+
+header .contentheader .login .btnform img{
+  margin-left: 0;
+}
+
+
+header .contentheader .login a {
+  padding: 3px 14px 7px;
+  text-decoration: none;
+  background-color: #ddd;
+  color: #556;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+header .contentheader .login a img {
+  width: 20px;
+  margin-bottom: -7px;
+  margin-right: 8px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+
+
+
+.container{
+  display: flex;
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////////// */
+
+.aboutcontent {
+  width: 60%;
+  background-color: #fff;
+  padding: 15px 10px;
+  margin: 105px auto 40px;
+  line-height: 2.5;
+  border-radius: 5px;
+}
+
+.aboutcontent h3 {
+  font-size: 33px;
+}
+
+.aboutcontent p {
+  font-size: 20px;
+}
+
+
+
+
+/* /////////////////////////////////////////////////////////////// */
+
+
+.backlist{
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(130, 130, 130, .4);
+  z-index: 5;
+  position: absolute;
+  overflow-x: hidden;
+  animation-name: combacklist;
+  animation-duration: .2s;
+}
+
+@keyframes combacklist {
+  from {right: -101%;}
+  to {right: 0;}
+}
+
+
+.lists{
+  width: 230px;
+  position: fixed;
+  top: 0px;
+  overflow-y: scroll;
+  height: 100vh;
+  border-radius: 10px 0 0 0 ;
+  height: min-content;
+  background-color: #fff;
+  z-index: 99;
+  animation-name: comlist;
+  animation-duration: .6s;
+}
+
+@keyframes comlist {
+  from {right: -240px;}
+  to {right: 0;}
+}
+@keyframes golist {
+  from {right: 0px;}
+  to {right: -240PX;}
+}
+
+.lists ul{
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.lists ul li{
+  font-size: 16px;
+  width: 100%;
+  transition: all .2s ease;
+}
+
+.lists ul li:hover{
+  background-color: #efffef;
+}
+
+.lists ul li img{
+  width: 25px;
+}
+
+.lists ul li a{
+  padding: 8px 40px 8px 0;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+}
+
+.lists ul li a span{
+  color: red;
+  font-size: 14px;
+}
+
+.lists ul li a img{
+  margin-bottom: -9px;
+}
+
+.lists .ul_game{
+  padding-top: 25px;
+}
+
+.lists h4{
+  color: #688;
+  font-size: 18px;
+  text-align: right;
+  margin: 10px 20px;
+  font-weight: 700;
+}
+
+.lists .ul_soon{
+  padding-bottom: 30px;
+}
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////// */
+
+footer {
+  background-color: #fff;
+  width: 100%;
+  margin-top: 70px;
+}
+
+footer .aboutlink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 10px;
+}
+
+footer .aboutlink div {
+  width: 33px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  margin: 0 15px;
+}
+footer .aboutlink div:hover {
+  background-color: #ddd;
+}
+
+footer .aboutlink div a img {
+  width: 20px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  color: #777;
+}
+
+footer .risbuttons {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #ded;
+  display: none;
+}
+
+footer .risbuttons a {
+  margin: 0 15px;
+}
+footer .risbuttons a img {
+  width: 20px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+@media screen and (max-width: 1100px) {
+  .aboutcontent {
+    width: 90%;
+  }
+
+  footer .risbuttons {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  header .contentheader .items {
+    width: 70%;
+    display: flex;
+    align-items: center;
+  }
+
+  header .contentheader .items button {
+    font-size: 14px;
+  }
+
+  header .contentheader .items a {
+    display: none;
+  }
+
+  header .contentheader .items .fav {
+    display: block;
+  }
+
+  header .contentheader .search {
+    display: none;
+  }
+
+  header .contentheader .login button {
+    display: none;
+  }
+
+  header .contentheader .login {
+    width: 30%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  header .contentheader .login .btnform{
+    display: flex;
+  }
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+
+
+@media screen and (max-width: 420px){
+
+  header .contentheader .items {
+    width: 60%;
+  }
+
+  header .contentheader .items button {
+    padding: 6px 6px 9px;
+  }
+  header .contentheader .items button img{
+    width: 15px;
+    margin-bottom: -4px;
+  }
+
+  header .contentheader .items .fav img {
+    width: 33px;
+    margin-bottom: -3px;
+  }
+
+  header .contentheader .login {
+    width: 40%;
+  }
+
+  header .contentheader .login .btnform {
+    height: 33px;
+    width: 33px;
+  }
+  
+  header .contentheader .login .btnform img{
+    margin-left: 0;
+  }
+  
+  
+  header .contentheader .login a {
+    padding: 2px 11px 5px;
+    font-size: 15px;
+  }
+  
+  header .contentheader .login a img {
+    width: 19px;
+  }
+
+  .lists{
+    width: 190px;
+    top: 0px;
+    animation-name: comlist;
+    animation-duration: .5s;
+  }
+  
+  @keyframes comlist {
+    from {right: -200px;}
+    to {right: 0;}
+  }
+
+  .lists ul li img{
+    width: 17px;
+  }
+  .lists ul li a img{
+    margin-bottom: -5px;
+  }
+
+  .aboutcontent h3 {
+    font-size: 28px;
+  }
+  
+  .aboutcontent p {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 17px;
+  }
+}
