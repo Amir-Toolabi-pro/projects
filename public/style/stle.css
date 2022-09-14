@@ -13,6 +13,7 @@ body {
   direction: rtl;
   background-color: rgb(243 244 246);
   overflow-x: hidden;
+  height: 100vh;
 }
 
 
@@ -144,6 +145,8 @@ header .contentheader .login .btnform {
   height: 40px;
   width: 40px;
   background-color: #dfefff;
+  outline: none;
+  border: none;
   cursor: pointer;
   border-radius: 50%;
   margin-left: 5px;
@@ -328,6 +331,8 @@ footer {
   background-color: #fff;
   width: 100%;
   margin-top: 70px;
+  position: relative;
+  bottom: 0;
 }
 
 footer .aboutlink {
